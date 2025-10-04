@@ -1,0 +1,8 @@
+openai
+tiktoken
+chromadb #vectorDB
+langchain #framework for LLM apps
+GitPython
+python-dotenv
+streamlit
+langchain-community
