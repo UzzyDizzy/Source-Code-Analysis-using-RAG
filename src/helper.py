@@ -5,7 +5,7 @@ from git import Repo
 import stat
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 
 def _remove_readonly(func, path, excinfo):
     """Fix Windows permission errors by forcing write permission."""

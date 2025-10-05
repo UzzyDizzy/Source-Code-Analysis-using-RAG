@@ -2,8 +2,8 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
-from langchain.vectorstores import Chroma
-from langchain.chat_models import ChatOpenAI
+from langchain_chroma.vectorstores import Chroma
+from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationSummaryMemory
 from langchain.chains import ConversationalRetrievalChain
 from src.helper import repo_ingestion, load_embedding

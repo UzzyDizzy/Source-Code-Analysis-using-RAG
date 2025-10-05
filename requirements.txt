@@ -1,8 +1,10 @@
-openai
-tiktoken
-chromadb #vectorDB
-langchain #framework for LLM apps
-GitPython
-python-dotenv
-streamlit
-langchain-community
+chromadb==1.1.0
+GitPython==3.1.45
+langchain==0.3.27
+langchain-chroma==0.2.6
+langchain-community==0.3.30
+langchain-openai==0.3.34
+openai==2.1.0
+python-dotenv==1.1.1
+streamlit==1.50.0
+tiktoken==0.11.0
