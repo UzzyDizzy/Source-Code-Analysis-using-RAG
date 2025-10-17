@@ -33,7 +33,7 @@ def store_vectors():
     embeddings = load_embedding()
 
     # Safety: Filter out chunks that are too large
-    text_chunks = [chunk for chunk in text_chunks if len(chunk.page_content) < 6000]
+    text_chunks = [chunk for chunk in text_chunks if len(chunk.page_content) < 4000]
 
 
     vectordb = Chroma.from_documents(
