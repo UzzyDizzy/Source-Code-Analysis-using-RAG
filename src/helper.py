@@ -44,4 +44,7 @@ def text_splitter(documents):
     return splitter.split_documents(documents)
 
 def load_embedding():
-    return OpenAIEmbeddings(disallowed_special=())
+    return OpenAIEmbeddings(
+        model="text-embedding-3-small",  # ✅ Explicitly use a current embedding model
+        disallowed_special=()
+    )

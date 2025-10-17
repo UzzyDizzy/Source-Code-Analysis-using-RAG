@@ -11,6 +11,7 @@ def store_vectors():
         st.error("❌ No API key available. Please provide one before storing vectors.")
         return False
 
+    
     os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
     repo_path = "repo/"
@@ -30,6 +31,10 @@ def store_vectors():
         return False
 
     embeddings = load_embedding()
+
+    # Safety: Filter out chunks that are too large
+    text_chunks = [chunk for chunk in text_chunks if len(chunk.page_content) < 6000]
+
 
     vectordb = Chroma.from_documents(
         text_chunks,
